@@ -19,6 +19,36 @@ const router = createRouter({
       name: "template",
       component: () => import("../views/TempView.vue"),
     },
+    {
+      path: '/reactivity',
+      name: 'reactivity',
+      component: () => import('../views/ReactivityView.vue')
+    },
+    {
+      path: '/computed',
+      name: 'computed',
+      component: () => import('../views/ComputedView.vue')
+    },
+    {
+      path: '/binding',
+      name: 'binding',
+      component: () => import('../views/BindingView.vue')
+    },
+    {
+      path: "/conditional",
+      name: "conditional",
+      component: () => import("../views/CrView.vue"),
+    },
+    {
+      path: "/list",
+      name: "list",
+      component: () => import("../views/ListView.vue"),
+    },
+    {
+      path: "/event",
+      name: "event",
+      component: () => import("../views/EventView.vue"),
+    },
   ],
 });
 

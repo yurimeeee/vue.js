@@ -14,6 +14,12 @@ import HelloWorld from './components/HelloWorld.vue'
         <RouterLink to="/">Home</RouterLink>
         <RouterLink to="/about">About</RouterLink>
         <RouterLink to="/template">template 문법</RouterLink>
+        <RouterLink to="/reactivity">Reactivity</RouterLink>
+        <RouterLink to="/computed">computed</RouterLink>
+        <RouterLink to="/binding">Class style Binding</RouterLink>
+        <RouterLink to="/conditional">Conditional Rendering</RouterLink>
+        <RouterLink to="/list">List Rendering</RouterLink>
+        <RouterLink to="/event">Event Handler</RouterLink>
       </nav>
     </div>
   </header>
@@ -82,5 +88,11 @@ nav a:first-of-type {
     padding: 1rem 0;
     margin-top: 1rem;
   }
+}
+
+.layout{
+  padding: 20px;
+  border-top: 2px solid #ccc;
+  margin-top: 40px;
 }
 </style>
