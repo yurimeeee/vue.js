@@ -20,19 +20,19 @@ const router = createRouter({
       component: () => import("../views/TempView.vue"),
     },
     {
-      path: '/reactivity',
-      name: 'reactivity',
-      component: () => import('../views/ReactivityView.vue')
+      path: "/reactivity",
+      name: "reactivity",
+      component: () => import("../views/ReactivityView.vue"),
     },
     {
-      path: '/computed',
-      name: 'computed',
-      component: () => import('../views/ComputedView.vue')
+      path: "/computed",
+      name: "computed",
+      component: () => import("../views/ComputedView.vue"),
     },
     {
-      path: '/binding',
-      name: 'binding',
-      component: () => import('../views/BindingView.vue')
+      path: "/binding",
+      name: "binding",
+      component: () => import("../views/BindingView.vue"),
     },
     {
       path: "/conditional",
@@ -53,6 +53,16 @@ const router = createRouter({
       path: "/form",
       name: "form",
       component: () => import("../views/FormView.vue"),
+    },
+    {
+      path: "/lifecycle",
+      name: "lifecycle",
+      component: () => import("../views/LifecycleView.vue"),
+    },
+    {
+      path: "/watchers",
+      name: "watchers",
+      component: () => import("../views/WatchersView.vue"),
     },
   ],
 });
