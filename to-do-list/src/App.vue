@@ -29,8 +29,17 @@ export default {
       this.todos[index].checked = checked;
       console.log(this.todos);
     },
-    deleteTodo() {
-
+    deleteTodo(id) {
+      if (window.confirm('정말 삭제할까요?')) {
+        const index = this.todos.findIndex(todo => todo.id === id);
+        this.todos.splice(index, 1)
+      } else {
+        alert('취소되었습니다.')
+      }
+    },
+    modifyTodo(id) {
+      const inputEl = this.$refs.todoInput;
+      inputEl.value = todo.text;
     }
   }
 }
@@ -41,12 +50,16 @@ export default {
   <div class="container">
     <h1 class="text-center">To Do List</h1>
     <div class="mb-3">
-      <label for="todo" class="form-label">To do</label>
-      <input type="text" class="form-control" id="todo" placeholder="할일을 입력하세요" required @keyup.enter="AddTodo"
-        v-model="todoText">
+      <form action="" class="d-flex gap-2">
+        <label for="todo" class="form-label" ref="todoInput"></label>
+        <input type="text" class="form-control" id="todo" placeholder="할일을 입력하세요" required @keyup.enter="AddTodo"
+          v-model="todoText">
+        <button class="btn btn-primary">enter</button>
+      </form>
     </div>
     <!-- <Todo v-for="todo in todos" :key="todo.id" :todo="todo" @toggle-checkbox="toggleCheck" /> -->
-    <Todo v-for="todo in todos" :key="todo.id" :todo="todo" @toggle-checkbox="toggleCheck" @click-delete="deleteTodo" />
+    <Todo v-for="todo in todos" :key="todo.id" :todo="todo" @toggle-checkbox="toggleCheck" @click-delete="deleteTodo"
+      @click-modify="modifyTodo" />
   </div>
 </template>
 
