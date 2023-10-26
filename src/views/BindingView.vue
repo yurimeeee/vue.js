@@ -1,22 +1,22 @@
 <script>
-export default{
-  data() {
-    return {
-      isActive: true,
-      error: null,
-      activeClass: 'active',
-      errorClass: 'text-danger'
-    }
-  },
-  computed: {
-    classObject() {
+  export default{
+    data() {
       return {
-        active: this.isActive && !this.error,
-        'text-danger': this.error && this.error.type === 'fatal'
+        isActive: true,
+        error: null,
+        activeClass: 'active',
+        errorClass: 'text-danger'
+      }
+    },
+    computed: {
+      classObject() {
+        return {
+          active: this.isActive && !this.error,
+          'text-danger': this.error && this.error.type === 'fatal'
+        }
       }
     }
   }
-}
 
 </script>
 
