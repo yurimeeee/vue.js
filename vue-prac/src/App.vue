@@ -1,11 +1,11 @@
 <template>
   <img alt="Vue logo" src="./assets/logo.png">
   <HelloWorld msg="Welcome to Your Vue.js App" />
-  <YurimHappy mss="happy Yurimmmmmm" />
+  <YurimHappy mss="happy Yurimmmmmmmm" />
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import HelloWorld from './componentsg/HelloWorld.vue'
 import YurimHappy from './components/Yurim.vue'
 
 export default {
