@@ -12,8 +12,8 @@ export default {
           'Vue 4 - The Mystery'
         ]
       },
-      firstName : 'John',
-      lastName:'Doe'
+      firstName: 'John',
+      lastName: 'Doe'
     }
   },
   computed: {
@@ -22,13 +22,13 @@ export default {
       // `this`는 컴포넌트 인스턴스를 가리킵니다.
       return this.author.books.length > 0 ? 'Yes' : 'No'
     },
-    fullName:{
-      get(){
+    fullName: {
+      get() {
         return this.firstName + ' ' + this.lastName
       },
-      set(newValue){
+      set(newValue) {
         [this.firstName, this.lastName] = newValue.split(' ');
-      }      
+      }
     }
   }
 }
@@ -36,10 +36,13 @@ export default {
 </script>
 
 <template>
-  <p>책을 가지고 있다:</p>
-  <span>{{ publishedBooksMessage }}</span>
-  <hr>
-  <div>Name: {{this.fullName }}</div><!-- get() -->
-  <div>이름: {{ this.fullName='길동 홍'}}</div>
-  <!-- <div>이름: {{ this.fullName='  김'}}</div> -->
+  <div class="layout">
+    <h1>This is Computed Properties page</h1>
+    <p>책을 가지고 있다:</p>
+    <span>{{ publishedBooksMessage }}</span>
+    <hr>
+    <div>Name: {{ this.fullName }}</div><!-- get() -->
+    <div>이름: {{ this.fullName='길동 홍' }}</div>
+    <!-- <div>이름: {{ this.fullName='  김'}}</div> -->
+  </div>
 </template>
